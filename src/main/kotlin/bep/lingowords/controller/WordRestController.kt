@@ -1,7 +1,6 @@
 package bep.lingowords.controller
 
 import org.springframework.web.bind.annotation.*
-import bep.lingowords.domain.Word
 import bep.lingowords.service.WordService
 
 
