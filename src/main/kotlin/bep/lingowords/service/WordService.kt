@@ -7,8 +7,9 @@ import java.util.regex.Matcher
 import java.util.regex.Pattern
 import bep.lingowords.repositories.WordRepository
 import bep.lingowords.domain.Word
+import org.springframework.stereotype.Service
 
-
+@Service
 class WordService() {
 
 

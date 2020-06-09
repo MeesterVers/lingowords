@@ -4,8 +4,12 @@ import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
 import org.springframework.boot.Banner
 import bep.lingowords.service.WordService
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration
+import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
+
 
 @SpringBootApplication
+
 class LingowordsApplication
 
 fun main(args: Array<String>) {
