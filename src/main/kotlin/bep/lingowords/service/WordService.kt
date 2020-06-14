@@ -5,36 +5,34 @@ import java.io.FileNotFoundException
 import java.util.*
 import java.util.regex.Matcher
 import java.util.regex.Pattern
-import bep.lingowords.repositories.WordRepository
 import bep.lingowords.domain.Word
 import org.springframework.stereotype.Service
 
 @Service
 class WordService() {
 
-
     fun readAndCleanFile (file: String):MutableList<String>{
         val words: MutableList<String> = ArrayList()
         val r: Pattern = Pattern.compile("([a-z]{5,7})")
 
         try {
-            val myObj = File(file)
-            val myReader = Scanner(myObj)
+            val importedFile = File(file)
+            val fileReader = Scanner(importedFile)
 
-            while (myReader.hasNextLine()) {
-                val data: String = myReader.nextLine()
-                val matcher: Matcher = r.matcher(data)
+            while (fileReader.hasNextLine()) {
+                val word: String = fileReader.nextLine()
+                val matcher: Matcher = r.matcher(word)
 
-                if ((data.length >= 5) and (data.length <= 7) and (matcher.matches() === true)) {
-                    words.add(Word(null, data).word)
+                if ((word.length >= 5) and (word.length <= 7) and (matcher.matches() === true)) {
+                    words.add(Word(null, word).word)
                 }
             }
-            myReader.close()
+            fileReader.close()
+
         } catch (e: FileNotFoundException) {
             println("File not found")
             e.printStackTrace()
         }
-//        return wordRepository.getAllWords(words)
         return words
     }
 

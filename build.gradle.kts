@@ -24,7 +24,9 @@ dependencies {
 	implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
 	implementation ("org.springframework.boot:spring-boot-starter-security")
 	implementation ("org.springframework.security:spring-security-test")
-	testImplementation("org.springframework.boot:spring-boot-starter-test") {
+	testImplementation("org.springframework.boot:spring-boot-starter-test")
+	testImplementation ("org.junit.jupiter:junit-jupiter-api:5.3.1")
+	testRuntimeOnly ("org.junit.jupiter:junit-jupiter-engine:5.3.1"){
 		exclude(group = "org.junit.vintage", module = "junit-vintage-engine")
 	}
 }
