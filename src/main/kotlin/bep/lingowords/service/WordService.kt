@@ -32,6 +32,7 @@ class WordService() {
         } catch (e: FileNotFoundException) {
             println("File not found")
             e.printStackTrace()
+            
         }
         return words
     }
