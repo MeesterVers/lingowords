@@ -8,3 +8,5 @@ Lingowords verzamelt woorden uit een bron en maakt het toegankelijk voor de nog 
 ![Alt text](lingo-words-packagesreport.JPG?raw=true "JaCoCo Packages Test Report")
 
 [![codecov](https://codecov.io/gh/MeesterVers/lingowords/branch/master/graph/badge.svg)](https://codecov.io/gh/MeesterVers/lingowords)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=MeesterVers_lingowords&metric=alert_status)](https://sonarcloud.io/dashboard?id=MeesterVers_lingowords)
+[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=MeesterVers_lingowords&metric=sqale_rating)](https://sonarcloud.io/dashboard?id=MeesterVers_lingowords)
